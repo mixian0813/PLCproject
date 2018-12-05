@@ -1,0 +1,16 @@
+#define S7COMM_MIN_TELEGRAM_LENGTH          10
+
+/* Protocol identifier */
+#define S7COMM_PROT_ID                      0x32
+
+/* Wireshark ID of the S7COMM protocol */
+static int proto_s7comm = -1;
+
+/* Forward declarations */
+void proto_reg_handoff_s7comm(void);
+void proto_register_s7comm (void);
+
+/**************************************************************************
+ * PDU types
+ */
+#define S7COMM_ROSCTR_JOB                   0x01
